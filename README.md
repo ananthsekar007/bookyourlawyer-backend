@@ -1,6 +1,6 @@
 # bookyourlawyer-backend
 
-## :point-down: Steps to initialize the project:
+## :point_down: Steps to initialize the project:
 
 1. Clone the repo
 
