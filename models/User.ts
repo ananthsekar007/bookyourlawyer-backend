@@ -12,7 +12,10 @@ export default class User extends Model {
   public password!: string;
   @Field({ nullable: true })
   public type!: string;
-
+  @Field({nullable: true})
+  public name!: string;
+  @Field({nullable: true})
+  public phone_number!: number;
 }
 User.init(
   {
@@ -23,6 +26,12 @@ User.init(
     },
     email: {
       type: DataTypes.STRING,
+    },
+    name: {
+      type: DataTypes.STRING,
+    },
+    phone_number: {
+      type: DataTypes.BIGINT,
     },
     password: {
       type: DataTypes.STRING,
