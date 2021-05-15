@@ -8,7 +8,8 @@
     "start": "nodemon --exec babel-node src/index.ts",
     "dev:windows": "nodemon --exec yarn server:dev",
     "dev:linux": "nodemon --exec 'yarn server:dev'",
-    "server:dev": "node --require ts-node/register/transpile-only --inspect  ./src/server.ts -e ts,graphql"
+    "server:dev": "node --require ts-node/register/transpile-only --inspect  ./src/server.ts -e ts,graphql",
+    "db:migrate": "npx sequelize-cli db:migrate"
   },
   "keywords": [],
   "author": "",
