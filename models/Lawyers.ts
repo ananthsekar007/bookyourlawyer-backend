@@ -29,4 +29,4 @@ Laywer.init(
 
 );
 
-Laywer
+Laywer.belongsTo(User, {foreignKey: "id"});

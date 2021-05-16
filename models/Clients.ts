@@ -27,4 +27,4 @@ Client.init(
   }
 );
 
-User.belongsTo(User, {foreignKey: "user_id"});
+User.belongsTo(User, {foreignKey: "id"});
