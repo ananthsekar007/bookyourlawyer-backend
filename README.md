@@ -26,12 +26,28 @@ $ yarn install
 5. Run the migration files
 
 ```
-$ npx sequelize-cli db:migrate
+$ yarn db:migrate
 
 ```
 6. Run the Backend Application
 
+<b>For windows users, run the following command</b>
+
 ```
-$ yarn dev
+$ yarn dev:windows
+
+```
+<b>For Linux users, run the following command</b>
+
+```
+$ yarn dev:linux
+
+```
+## :speaking_head: Important Commands:
+
+1. To create a migration file, Run the following command
+
+```
+$ yarn create:migration fileName
 
 ```
