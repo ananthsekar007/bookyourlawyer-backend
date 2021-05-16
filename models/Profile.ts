@@ -33,7 +33,8 @@ Profile.init(
       primaryKey: true,
     },
     user_id: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        references: {model: "users", key: "id"}
     },
     email: {
       type: DataTypes.STRING,
