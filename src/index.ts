@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 });
 
 app.use(cors());
-app.use(helmet());
+app.use(helmet({ contentSecurityPolicy: (process.env.NODE_ENV === 'production') ? undefined : false }));
 app.use(bodyParser.json())
 
 // app.listen(8000, async function () {

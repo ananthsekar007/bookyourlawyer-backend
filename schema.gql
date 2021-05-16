@@ -3,6 +3,20 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+type AuthResponse {
+  token: String!
+  user: User
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+type Mutation {
+  login(input: LoginInput!): AuthResponse!
+}
+
 type Query {
   user_get: User!
 }
@@ -10,6 +24,8 @@ type Query {
 type User {
   email: String
   id: ID!
+  name: String
   password: String
+  phone_number: Float
   type: String
 }
