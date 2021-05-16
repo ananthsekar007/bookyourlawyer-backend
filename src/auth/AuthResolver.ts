@@ -17,6 +17,11 @@ class AuthResponse {
 }
 
 @InputType()
+class RegisterInput {
+
+}
+
+@InputType()
 class LoginInput {
   @Field()
   email: string;
@@ -31,7 +36,7 @@ export class AuthResolver {
     async user_get(@Ctx() context: Context) {
     return context.req;
   }
-  
+
   @Mutation(() => AuthResponse)
   async login(@Arg("input", {validate: true}) loginInput: LoginInput, @Ctx() context: Context ) {
     const user = await User.findOne({
@@ -50,4 +55,7 @@ export class AuthResolver {
       throw new Error("Invalid username or password");
     }
   }
+
+  // @Mutation(() => AuthResponse)
+
 }
