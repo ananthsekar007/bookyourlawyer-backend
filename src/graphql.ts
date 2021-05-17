@@ -4,13 +4,14 @@ import depthLimit from "graphql-depth-limit";
 import { buildSchema } from "type-graphql";
 import { Context } from "./../types/Context";
 import { AuthResolver } from "./../src/auth/AuthResolver";
+import { ProfileResolver } from "./../src/auth/ProfileResolver";
 
 const gqlDepthLimit = 7;
 const gqlPath = "/bookyourlawyer";
 
 export async function buildApolloServer(app: express.Application, httpServer) {
   const schema = await buildSchema({
-    resolvers: [AuthResolver],
+    resolvers: [AuthResolver,ProfileResolver],
     emitSchemaFile: true,
     validate: false,
   });

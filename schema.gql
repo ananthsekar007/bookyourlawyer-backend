@@ -14,11 +14,40 @@ input LoginInput {
 }
 
 type Mutation {
+  Profile(input: ProfileInput!): ProfileResponse!
   login(input: LoginInput!): AuthResponse!
   register(input: RegisterInput!): AuthResponse!
 }
 
+type Profile {
+  case_type: String
+  district: String
+  email: String
+  govt_id: String
+  id: ID!
+  name: String
+  password: String
+  phone_number: Float
+  state: String
+  user_id: Float
+}
+
+input ProfileInput {
+  case_type: String!
+  district: String!
+  email: String!
+  govt_id: String!
+  name: String!
+  phone_number: Float!
+  state: String!
+}
+
+type ProfileResponse {
+  profile: Profile
+}
+
 type Query {
+  profile_get: Profile!
   user_get: User!
 }
 
