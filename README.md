@@ -21,7 +21,7 @@ $ cd bookyourlawyer-backend
 $ yarn install
 
 ```
-4. Start <b>Xampp</b> and Create a database as "<b>bookyourlaywer</b>"
+4. Start <b>Xampp</b> and Create a database as "<b>bookyourlawyer</b>"
 
 5. Run the migration files
 
